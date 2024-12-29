@@ -1,12 +1,15 @@
-import { baseURL } from '@/app/resources'
+import { baseURL } from '@/app/resources';
 
 export default function robots() {
+    const isProduction = process.env.NODE_ENV === 'production';
+
     return {
         rules: [
             {
                 userAgent: '*',
+                disallow: isProduction ? [] : ['/'],
             },
         ],
-        sitemap: `${baseURL}/sitemap.xml`,
-    }
+        sitemap: isProduction ? `${baseURL}/sitemap.xml` : undefined,
+    };
 }
