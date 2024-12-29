@@ -1,0 +1,60 @@
+{
+    "person": {
+      "role": "CEO, Graphic Designer, and Public Relations Specialist"
+    },
+    "newsletter": {
+      "title": "Subscribe to Jezrelle's Newsletter",
+      "description": "I write about graphic design, technology, startups, and my journey as a creative leader.",
+      "button": "Sign up"
+    },
+    "home": {
+      "label": "Home",
+      "title": "Jezrelle's Portfolio",
+      "description": "Portfolio website showcasing my work as a creative leader",
+      "headline": "Innovative Creator and Builder",
+      "subline": "I'm Jezrelle, leading projects in design, tech, and academic initiatives while building impactful solutions."
+    },
+    "about": {
+      "label": "About",
+      "title": "About me",
+      "description": "Meet Jezrelle, a creative leader from Cagayan de Oro, Philippines",
+      "intro": {
+        "title": "Introduction",
+        "description": "Jezrelle is a creative visionary focused on solving challenges through design and technology. She balances leadership roles across organizations, startups, and academic initiatives."
+      },
+      "work": {
+        "title": "Work Experience",
+        "experiences": {
+          "FAESO": {
+            "timeframe": "2023 - Present",
+            "role": "Public Relations Specialist",
+            "achievements": "Enhanced outreach programs, leading to a 25% increase in event participation."
+          },
+          "SCITC": {
+            "timeframe": "2023 - Present",
+            "role": "Graphic Designer",
+            "achievements": "Designed promotional materials that increased engagement rates by 40%."
+          }
+        }
+      },
+      "studies": {
+        "title": "Studies",
+        "institutions": {
+          "USTP": {
+            "description": "Pursuing a degree in Information Technology, with a focus on design and development."
+          }
+        }
+      },
+      "technical": {
+        "title": "Technical skills",
+        "skills": {
+          "React Native": {
+            "description": "Building cross-platform applications efficiently with React Native."
+          },
+          "Figma": {
+            "description": "Proficient in creating engaging prototypes and visual designs."
+          }
+        }
+      }
+    }
+  }  
