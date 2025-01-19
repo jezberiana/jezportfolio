@@ -1,7 +1,15 @@
 import { notFound } from "next/navigation";
 import { CustomMDX } from "@/components/mdx";
 import { getPosts } from "@/app/utils/utils";
-import { AvatarGroup, Button, Column, Heading, Row, Text, SmartImage} from "@/once-ui/components";
+import {
+  AvatarGroup,
+  Button,
+  Column,
+  Heading,
+  Row,
+  Text,
+  SmartImage,
+} from "@/once-ui/components";
 import { baseURL } from "@/app/resources";
 import { person } from "@/app/resources/content";
 import { formatDate } from "@/app/utils/formatDate";
@@ -21,21 +29,23 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
 }
 
 export function generateMetadata({ params: { slug } }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === slug);
+  const post = getPosts(["src", "app", "blog", "posts"]).find(
+    (post) => post.slug === slug
+  );
 
   if (!post) {
     return;
   }
 
-  let {
+  const {
     title,
     publishedAt: publishedTime,
     summary: description,
-    images,
     image,
-    team,
   } = post.metadata;
-  let ogImage = image ? `https://${baseURL}${image}` : `https://${baseURL}/og?title=${title}`;
+  const ogImage = image
+    ? `https://${baseURL}${image}`
+    : `https://${baseURL}/og?title=${title}`;
 
   return {
     title,
@@ -46,11 +56,7 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
       type: "article",
       publishedTime,
       url: `https://${baseURL}/blog/${post.slug}`,
-      images: [
-        {
-          url: ogImage,
-        },
-      ],
+      images: [{ url: ogImage }],
     },
     twitter: {
       card: "summary_large_image",
@@ -62,7 +68,9 @@ export function generateMetadata({ params: { slug } }: BlogParams) {
 }
 
 export default function Blog({ params }: BlogParams) {
-  let post = getPosts(["src", "app", "blog", "posts"]).find((post) => post.slug === params.slug);
+  const post = getPosts(["src", "app", "blog", "posts"]).find(
+    (post) => post.slug === params.slug
+  );
 
   if (!post) {
     notFound();
@@ -108,13 +116,13 @@ export default function Blog({ params }: BlogParams) {
         </Text>
       </Row>
       {post.metadata.images.length > 0 && (
-          <SmartImage
-            priority
-            aspectRatio="16 / 9"
-            radius="m"
-            alt="image"
-            src={post.metadata.images[0]}
-          />
+        <SmartImage
+          priority
+          aspectRatio="16 / 9"
+          radius="m"
+          alt="Main image"
+          src={post.metadata.images[0]}
+        />
       )}
       <Column as="article" fillWidth>
         <CustomMDX source={post.content} />
