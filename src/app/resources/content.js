@@ -58,6 +58,7 @@ const about = {
   },
   avatar: {
     display: true,
+    image: '/images/avatar.jpg', // Placeholder for about section avatar
   },
   calendar: {
     display: true,
@@ -92,7 +93,14 @@ const about = {
             needs, resulting in a platform that is both efficient and impactful.
           </>,
         ],
-        images: [],
+        images: [
+          {
+            src: '/images/projects/project-01/cover-01.jpg',
+            alt: 'Buddle Project',
+            width: 16,
+            height: 9,
+          },
+        ],
       },
       {
         company: "FAESO",
@@ -188,14 +196,21 @@ const about = {
         images: [],
       },
       {
-        title: "Next.js",
-        description: <>Building next-gen apps with Next.js + Once UI + Supabase.</>,
-        images: [],
-      },
-      {
         title: "React Native",
         description: <>Expertise in developing mobile applications with React Native and TypeScript.</>,
         images: [],
+      },
+      {
+        title: "Next.js",
+        description: <>Building next-gen apps with Next.js + Once UI + Supabase.</>,
+        images: [
+          {
+            src: '/images/projects/project-01/image-01.jpg',
+            alt: 'React Native Skill',
+            width: 16,
+            height: 9,
+          },
+        ],
       },
     ],
   },
@@ -217,78 +232,7 @@ const gallery = {
   label: "Gallery",
   title: "My photo gallery",
   description: `A photo collection by ${person.name}`,
-  images: [
-    {
-      src: "/images/gallery/img-01.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-02.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-03.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-04.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-05.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-06.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-07.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-08.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-09.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-10.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-11.jpg",
-      alt: "image",
-      orientation: "vertical",
-    },
-    {
-      src: "/images/gallery/img-12.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-13.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-    {
-      src: "/images/gallery/img-14.jpg",
-      alt: "image",
-      orientation: "horizontal",
-    },
-  ],
+  images: [],
 };
 
 export { person, social, newsletter, home, about, blog, work, gallery };
