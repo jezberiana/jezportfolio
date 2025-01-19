@@ -1,0 +1,48 @@
+---
+title: "Building P2P Chat: A Real-Time Communication Platform"  
+publishedAt: "2024-12-27"  
+summary: "A peer-to-peer chat application utilizing WebSocket technology for seamless real-time communication and user-friendly design."  
+images:  
+  - "/images/projects/project-01/cover-03.png"  
+team:  
+  - name: "Jezrelle Cris C. Beriana"  
+    role: "Frontend Developer"  
+    avatar: "/images/avatar.jpg"  
+    linkedIn: "https://www.linkedin.com/in/jezberiana/"  
+---
+
+## Overview
+
+P2P Chat is a real-time communication platform designed to facilitate seamless interactions using WebSocket technology. Built with simplicity and scalability in mind, it enables multi-user environments while ensuring efficiency and responsiveness.
+
+## Key Features
+
+- **Real-Time Messaging**: Instant message delivery powered by WebSocket and Socket.IO.  
+- **Multi-User Support**: Capable of handling multiple users in dynamic chatrooms.  
+- **Static Front-End**: Lightweight, responsive UI implemented with HTML, CSS, and JavaScript.  
+- **Express.js Backend**: Serves static files and manages WebSocket connections effortlessly.  
+
+## Technologies Used
+
+- **Node.js & Express**: For server-side handling and routing.  
+- **Socket.IO**: Enables real-time bi-directional communication.  
+- **HTML, CSS, and JS**: Simplifies the client-side experience.  
+- **Jest**: Ensures robust socket testing for error-free communication.  
+
+## Challenges and Learnings
+
+One of the primary challenges was optimizing WebSocket performance to handle multiple users concurrently without lag. Balancing reliability and minimal overhead required iterative testing and debugging.  
+
+Another obstacle was creating a user-friendly interface that remains intuitive while maintaining essential features. Simplifying the UI without losing functionality underscored the importance of user-centered design principles.  
+
+## Directory Structure
+
+```plaintext
+├── client
+│   ├── app.js        # Handles client-side logic
+│   ├── index.html    # Main entry point for the UI
+│   ├── style.css     # Styling for the interface
+│   ├── ui.js         # Manages dynamic UI interactions
+├── server.js          # Server-side logic for WebSocket communication
+├── socket.test.js     # Test file for WebSocket functionalities
+├── package.json       # Project dependencies and metadata
